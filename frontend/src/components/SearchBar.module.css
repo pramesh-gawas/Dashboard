@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.search {
+  border-color: rgb(116, 116, 243);
+  border-radius: 10px;
+  width: 90dvw;
+  height: 40px;
+  margin-top: 7px;
+  padding-left: 10px;
+}
