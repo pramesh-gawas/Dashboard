@@ -1,19 +1,19 @@
-import style from "./DataVisuals.module.css";
-
 export const DataVisuals = () => {
   return (
-    <div className={style.mainContainer}>
-      <div className={style.distribute}>
-        <div className={style.box}>1</div>
-        <div className={style.box}>2</div>
-        <div className={style.box}>3</div>
-        <div className={style.box}>4</div>
-        <div className={style.box}>5</div>
-        <div className={style.box}>6</div>
-        <div className={style.box}>7</div>
-        <div className={style.box}>8</div>
-        <div className={style.box}>7</div>
-        <div className={style.box}>8</div>
+    <div class="container text-center">
+      <div class="row  border">
+        <div class="col-6 g-2   " style={{ height: "150px" }}>
+          <div class="p-3  bg-body-danger">Custom column padding</div>
+        </div>
+        <div class="col-6 g-2  " style={{ height: "150px" }}>
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col-6  g-2 " style={{ height: "150px" }}>
+          <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col-6 g-2" style={{ height: "150px" }}>
+          <div class="p-3">Custom column padding</div>
+        </div>
       </div>
     </div>
   );

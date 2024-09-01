@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-/* import "bootstrap/dist/css/bootstrap.min.css"; */
 import "./App.css";
 import { SearchBar } from "./components/SearchBar";
 import { SideBar } from "./components/SideBar";
 import { DataVisuals } from "./components/DataVisuals";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 const dataSet = [
   {
     end_year: "",
@@ -30,15 +30,33 @@ const dataSet = [
   },
 ];
 
+const URL = "http://localhost:3000/all";
+
+const dataFetch = async () => {
+  try {
+    const response = await fetch(URL);
+    const data = response.json();
+    console.log(data);
+  } catch (error) {
+    console.error();
+  }
+};
+
 function App() {
+  //data  fetch
+  useEffect(() => {
+    dataFetch(), [];
+  });
+
   return (
     <>
       <Header></Header>
-      <SearchBar />
-      <class className="container">
-        <SideBar />
+      <div className="d-flex  ms-2 me-2  ">
+        <SideBar dataSet={dataSet} />
         <DataVisuals />
-      </class>
+      </div>
+
+      <Footer></Footer>
     </>
   );
 }
