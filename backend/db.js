@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const mongoUrl = "mongodb://localhost:27017/Blackcoffer";
+const mongoUrl =
+  "mongodb+srv://pramesh:12345@cluster0.vgdsn12.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(mongoUrl);
 
