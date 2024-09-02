@@ -1,6 +1,4 @@
-const { options } = require("./router");
 const DashBoard = require("./Schema");
-
 //to fetch all the data
 const GetAllTheData = async (req, res) => {
   try {

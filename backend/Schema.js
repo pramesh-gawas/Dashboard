@@ -70,6 +70,6 @@ const DashBoardSchema = new mongoose.Schema({
   },
 });
 
-const DashBoard = mongoose.model("Blackcoffer", DashBoardSchema);
+const DashBoard = mongoose.model("black", DashBoardSchema);
 
 module.exports = DashBoard;

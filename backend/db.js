@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-
-const mongoUrl =
-  "mongodb+srv://pramesh:12345@cluster0.vgdsn12.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+require("dotenv").config();
+const mongoUrl = process.env.URL;
 
 mongoose.connect(mongoUrl);
 

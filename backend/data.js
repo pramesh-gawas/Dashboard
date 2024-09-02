@@ -14,9 +14,9 @@ async function insertData() {
   try {
     await client.connect();
     const db = client.db("Dashboard");
-    const collection = db.collection("Black");
+    const collection = db.collection("blacks");
 
-    const result = await collection.insertMany(data);
+    const result = await collection.deleteMany(data);
     console.log("Document inserted successfully:", result.insertedId);
   } catch (err) {
     console.error("Error inserting document:", err);
