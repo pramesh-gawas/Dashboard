@@ -34,6 +34,7 @@ const GetAllTheData = async (req, res) => {
     }
 
     const data = await DashBoard.find(obj);
+
     res
       .status(200)
       .json({ message: "All the data fetched", success: true, data });

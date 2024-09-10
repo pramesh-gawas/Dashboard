@@ -1,61 +1,81 @@
 export const Header = () => {
   return (
     <header>
-      <div class="px-2 py-2 text-bg-dark border-bottom">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <div className="px-2 py-2 text-bg-dark border-bottom">
+        <div className="container">
+          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
               href="/"
-              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
+              className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
             >
               <svg
-                class="bi me-2"
+                className="bi me-2"
                 width="40"
                 height="32"
                 role="img"
                 aria-label="Bootstrap"
               >
-                <use xlink:href="#bootstrap"></use>
+                <use xlinkHref="#bootstrap"></use>
               </svg>
             </a>
 
-            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-secondary">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#home"></use>
+                <a href="#" className="nav-link text-secondary">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
+                    <use xlinkHref="#home"></use>
                   </svg>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#speedometer2"></use>
+                <a href="#" className="nav-link text-white">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
+                    <use xlinkHref="#speedometer2"></use>
                   </svg>
                   Dashboard
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#table"></use>
+                <a href="#" className="nav-link text-white">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
+                    <use xlinkHref="#table"></use>
                   </svg>
                   Orders
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#grid"></use>
+                <a href="#" className="nav-link text-white">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
+                    <use xlinkHref="#grid"></use>
                   </svg>
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#people-circle"></use>
+                <a href="#" className="nav-link text-white">
+                  <svg
+                    className="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                  >
+                    <use xlinkHref="#people-circle"></use>
                   </svg>
                   Customers
                 </a>
@@ -106,32 +126,32 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div class="px-3 py-2 border-bottom mb-3">
-        <div class="container d-flex flex-wrap justify-content-center">
+      <div className="px-3 py-2 border-bottom mb-3">
+        <div className="container d-flex flex-wrap justify-content-center">
           <form
-            class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto"
+            className="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto"
             role="search"
           >
             <input
               type="search"
-              class="form-control"
+              className="form-control"
               placeholder="Search..."
               aria-label="Search"
               jf-ext-cache-id="4"
             />
           </form>
 
-          <div class="text-end">
+          <div className="text-end">
             <button
               type="button"
-              class="btn btn-light text-dark me-2"
+              className="btn btn-light text-dark me-2"
               jf-ext-button-ct="login"
             >
               Login
             </button>
             <button
               type="button"
-              class="btn btn-primary"
+              className="btn btn-primary"
               jf-ext-button-ct="sign-up"
             >
               Sign-up

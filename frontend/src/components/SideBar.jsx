@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-export const SideBar = ({ dataset }) => {
+export const SideBar = ({ data }) => {
+  console.log(data);
   const headerFilter = [
     "Topic",
-    "End Year",
+    "Year",
     "Sector",
     "Region",
     "Pest",
@@ -13,12 +14,16 @@ export const SideBar = ({ dataset }) => {
     "City",
   ];
 
+  const filterYear = [
+    2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025, 2026, 2027, 2028,
+    2030, 2034, 2035, 2036, 2040, 2041, 2046, 2050, 2051, 2055, 2060, 2126,
+    2200,
+  ];
+
   const [useToggle, setToggle] = useState(false);
   const toggle = () => {
     setToggle(!useToggle);
   };
-
-  const filterCheck = ["2016-2024", "2025-2036", "2040-2055", "2060-2200"];
 
   return (
     <>
@@ -37,31 +42,31 @@ export const SideBar = ({ dataset }) => {
         </a>
         <hr />
         <div className="d-flex justify-content-around">
-          {" "}
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
         </div>
-
         {headerFilter.map((item) => (
-          <div className="mt-4 d-flex justify-content-around">
-            <button
-              htmlFor=""
-              className="dropdown-toggle w-100"
-              onClick={toggle}
-            >
-              {item}
-
-              <option
-                value=""
-                className="dropdown-menu "
-                /*  style={{ display: useToggle ? "block" : "none" }} */
-              >
-                <input type="checkbox" name="" id="" />
-                <input type="checkbox" name="" id="" />
-                <input type="checkbox" name="" id="" />
+          <button>
+            {item}
+            <select name="" id="">
+              <option value="selct year">
+                {item === "Year"
+                  ? filterYear.map((year) => (
+                      <>
+                        <ul>
+                          <li className="">
+                            <label className="d-flex flex-col" htmlFor="">
+                              {year + " "}
+                            </label>
+                            <input type="checkbox" name={year} id="" />
+                          </li>
+                        </ul>
+                      </>
+                    ))
+                  : ""}
               </option>
-            </button>
-          </div>
+            </select>
+          </button>
         ))}
       </div>
     </>

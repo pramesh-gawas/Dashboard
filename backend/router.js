@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { GetAllTheData } = require("./controllers");
 
-router.get("/all", GetAllTheData);
+router.get("/", GetAllTheData);
 
 module.exports = router;
