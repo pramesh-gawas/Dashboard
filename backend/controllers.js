@@ -2,8 +2,17 @@ const DashBoard = require("./Schema");
 //to fetch all the data
 const GetAllTheData = async (req, res) => {
   try {
-    const { end_year, topic, sector, region, country, pestle, source } =
-      req.query;
+    const {
+      end_year,
+      topic,
+      sector,
+      region,
+      country,
+      pestle,
+      source,
+      intensity,
+      likelihood,
+    } = req.query;
     const obj = {};
 
     if (end_year) {
@@ -11,30 +20,36 @@ const GetAllTheData = async (req, res) => {
     }
 
     if (topic) {
-      obj.topic = { $regex: topic, $options: "i" };
+      obj.topic = topic;
     }
 
     if (sector) {
-      obj.sector = { $regex: sector, $options: "i" };
+      obj.sector = sector;
     }
 
     if (region) {
       obj.region = region;
     }
     if (country) {
-      obj.country = { $regex: country, options: "i" };
+      obj.country = country;
     }
 
     if (pestle) {
-      obj.pestle = { $regex: pestle, options: "i" };
+      obj.pestle = pestle;
     }
 
     if (source) {
-      obj.source = { $regex: source, options: "i" };
+      obj.source = source;
+    }
+
+    if (intensity) {
+      obj.intensity = intensity;
+    }
+    if (likelihood) {
+      obj.likelihood = likelihood;
     }
 
     const data = await DashBoard.find(obj);
-
     res
       .status(200)
       .json({ message: "All the data fetched", success: true, data });

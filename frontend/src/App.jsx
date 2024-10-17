@@ -4,35 +4,44 @@ import { SideBar } from "./components/SideBar";
 import { DataVisuals } from "./components/DataVisuals";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { ContextAPi } from "./components/store/ContextAPi";
 
-const URL = "http://localhost:8000/all";
+const URL = `http://localhost:8000/`;
+/*   `https://dashboard-orpin-tau-34.vercel.app/`; */
 
 function App() {
-  const [data, setdata] = useState("");
+  const [data, setData] = useState([]);
+  const [visualData, setVisualData] = useState([]);
 
   //data  fetch
-  const dataFetch = async () => {
-    try {
-      const response = await fetch(URL);
-      const result = await response.json();
-      const arrayData = result.data;
-      setdata(arrayData);
-    } catch (error) {
-      console.error();
-    }
-  };
-  console.log(data);
 
   useEffect(() => {
-    dataFetch();
+    const fetchData = async () => {
+      try {
+        const response = await fetch(URL);
+        const data = await response.json();
+
+        const result = await data.data;
+
+        {
+          !data ? <p>Loading </p> : setData(result);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <>
       <Header></Header>
       <div className="d-flex  ms-2 me-2  ">
-        <SideBar data={data} />
-        <DataVisuals />
+        <ContextAPi>
+          <SideBar data={data} />
+          <DataVisuals data={data} />
+        </ContextAPi>
       </div>
 
       <Footer></Footer>

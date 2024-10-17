@@ -26,7 +26,7 @@ const DashBoardSchema = new mongoose.Schema({
     require: true,
   },
   region: {
-    type: Number,
+    type: String,
     require: true,
   },
   start_year: {
