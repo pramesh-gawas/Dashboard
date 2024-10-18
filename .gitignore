@@ -9,6 +9,7 @@ lerna-debug.log*
 jsondata.json
 node_modules
 .env
+jsondata
 
 dist
 dist-ssr
