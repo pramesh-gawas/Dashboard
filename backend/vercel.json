@@ -10,6 +10,7 @@
     {
       "src": "/(.*)",
       "dest": "index.js",
+      "methods":["GET","OPTIONS"],
       "headers":{"Access-Control-Allow-Origin":"*"}
     }
   ]
