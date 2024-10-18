@@ -10,7 +10,6 @@ const URL = `https://dashboard-blue-tau.vercel.app/?vercelToolbarCode=pxw1WNrQci
 
 function App() {
   const [data, setData] = useState([]);
-  const [visualData, setVisualData] = useState([]);
 
   //data  fetch
 
