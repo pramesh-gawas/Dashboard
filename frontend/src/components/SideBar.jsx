@@ -70,7 +70,7 @@ export const SideBar = ({ data }) => {
         resetFormdata();
         event.target.reset();
       })
-      .catch((error) => alert("Please select a year"));
+      .catch((error) => alert("please select year"));
   };
 
   const handleDropdownToggle = (index) => {

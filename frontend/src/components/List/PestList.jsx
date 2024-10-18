@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export const PestList = ({ data, setFormData, formData }) => {
-  console.log(data);
   const filterData = data.filter((item) => item.pestle !== "");
 
   const uniqueValues = [
