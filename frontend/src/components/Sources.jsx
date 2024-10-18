@@ -6,8 +6,10 @@ export const Sources = () => {
   const filter = graphData.map((item) => item.source);
   return (
     <div>
-      {filter.map((item) => (
-        <li style={{ listStyle: "none" }}>{item}</li>
+      {filter.map((item, index) => (
+        <li key={index} style={{ listStyle: "none" }}>
+          {item}
+        </li>
       ))}
     </div>
   );

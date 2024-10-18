@@ -6,8 +6,8 @@ export const Url = () => {
 
   return (
     <div>
-      {graphData.map((item) => (
-        <li style={{ listStyle: "none" }}>
+      {graphData.map((item, index) => (
+        <li key={index} style={{ listStyle: "none" }}>
           <a href={item.url}>{item.url}</a>
         </li>
       ))}

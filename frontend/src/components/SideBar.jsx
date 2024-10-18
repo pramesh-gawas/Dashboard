@@ -64,7 +64,7 @@ export const SideBar = ({ data }) => {
       .then((response) => {
         const { data } = response.data;
         {
-          data.length == 0 ? alert("no! data found") : handleUpdate(data);
+          data.length === 0 ? alert("no! data found") : handleUpdate(data);
         }
 
         resetFormdata();
