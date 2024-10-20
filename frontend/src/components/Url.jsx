@@ -8,7 +8,9 @@ export const Url = () => {
     <div>
       {graphData.map((item, index) => (
         <li key={index} style={{ listStyle: "none" }}>
-          <a href={item.url}>{item.url}</a>
+          <a target="_blank" href={item.url}>
+            {item.url}
+          </a>
         </li>
       ))}
     </div>

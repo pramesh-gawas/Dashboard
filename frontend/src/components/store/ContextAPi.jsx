@@ -4,6 +4,7 @@ import { useState } from "react";
 const MyContext = createContext({ graphData: [], handleUpdate: () => {} });
 export const ContextAPi = ({ children }) => {
   const [graphData, setgraphData] = useState([
+    //default values
     {
       _id: "66d5bf11a372c5ea7f7940e4",
       end_year: 2016,
@@ -91,7 +92,6 @@ export const ContextAPi = ({ children }) => {
       likelihood: 2,
     },
   ]);
-  console.log(graphData);
   return (
     <MyContext.Provider value={{ graphData, setgraphData }}>
       {children}

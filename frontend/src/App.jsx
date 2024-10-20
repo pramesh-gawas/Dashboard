@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { SearchBar } from "./components/SearchBar";
 import { SideBar } from "./components/SideBar";
 import { DataVisuals } from "./components/DataVisuals";
 import { Header } from "./components/Header";
@@ -35,7 +34,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className="d-flex  ms-2 me-2  ">
+      <div className=" d-flex ms-1 me-1  ">
         <ContextAPi>
           <SideBar data={data} />
           <DataVisuals data={data} />

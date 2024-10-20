@@ -83,7 +83,7 @@ export const SideBar = ({ data }) => {
   return (
     <>
       <div
-        className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark "
+        className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
         style={{ width: "230px" }}
       >
         <a
@@ -106,7 +106,7 @@ export const SideBar = ({ data }) => {
             <ul key={index}>
               <span className="dropdown">
                 <button
-                  className="btn btn-primary dropdown-toggle w-100 mt-4"
+                  className="btn btn-primary dropdown-toggle w-100 mt-4 "
                   type="button"
                   id={index}
                   data-mdb-toggle="dropdown"
