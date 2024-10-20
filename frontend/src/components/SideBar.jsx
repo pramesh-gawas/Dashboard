@@ -10,7 +10,7 @@ import { Swot } from "./List/Swot";
 import { CityList } from "./List/CityList";
 import axios from "axios";
 import { MyContext } from "./store/ContextAPi";
-
+import style from ".././components/Visuals.module.css";
 export const SideBar = ({ data }) => {
   const { setgraphData } = useContext(MyContext);
 
@@ -80,21 +80,23 @@ export const SideBar = ({ data }) => {
     setActiveDropdowns(newActiveDropdowns);
   };
 
+  const [isOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isOpen);
+  };
+
   return (
-    <>
-      <div
-        className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-        style={{ width: "230px" }}
-      >
-        <a
-          href="/"
-          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-        >
-          <svg className="bi pe-none me-2" width="40" height="32">
-            <use xlinkHref="#bootstrap"></use>
-          </svg>
-          <span className="fs-4">Apply Filter</span>
-        </a>
+    <div className="parent">
+      {/* <button type="button" className={style.hamburger} onClick={toggleSidebar}>
+        col
+      </button> */}
+
+      <div className={style.sidebar} style={{ width: "180px" }}>
+        <span className=" d-flex fs-4 align-item-center justtify-content-center">
+          Apply Filter
+        </span>
+
         <hr />
 
         <form onSubmit={dataSubmit}>
@@ -188,6 +190,6 @@ export const SideBar = ({ data }) => {
           ))}
         </form>
       </div>
-    </>
+    </div>
   );
 };

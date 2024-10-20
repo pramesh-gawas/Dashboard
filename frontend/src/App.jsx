@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className=" d-flex ms-1 me-1  ">
+      <div className=" d-flex ms-2 me-2  ">
         <ContextAPi>
           <SideBar data={data} />
           <DataVisuals data={data} />
