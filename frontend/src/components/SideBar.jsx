@@ -11,6 +11,7 @@ import { CityList } from "./List/CityList";
 import axios from "axios";
 import { MyContext } from "./store/ContextAPi";
 import style from ".././components/Visuals.module.css";
+import { GiHamburgerMenu } from "react-icons/gi";
 export const SideBar = ({ data }) => {
   const { setgraphData } = useContext(MyContext);
 
@@ -80,23 +81,29 @@ export const SideBar = ({ data }) => {
     setActiveDropdowns(newActiveDropdowns);
   };
 
-  const [isOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isOpen);
+    const sidebar = document.getElementById("sidebar");
+
+    sidebar.style.display == "block"
+      ? (sidebar.style.display = "none")
+      : (sidebar.style.display = "block");
   };
 
   return (
     <div className="parent">
-      {/* <button type="button" className={style.hamburger} onClick={toggleSidebar}>
-        col
-      </button> */}
-
-      <div className={style.sidebar} style={{ width: "180px" }}>
-        <span className=" d-flex fs-4 align-item-center justtify-content-center">
+      <GiHamburgerMenu className={style.hamburger} onClick={toggleSidebar} />
+      <div
+        className={style.sidebar}
+        style={{
+          width: "180px",
+          border: "1px solid black",
+          borderRadius: "20px",
+        }}
+        id="sidebar"
+      >
+        <div className="d-flex fs-4 align-item-center justify-content-center">
           Apply Filter
-        </span>
-
+        </div>
         <hr />
 
         <form onSubmit={dataSubmit}>
@@ -105,7 +112,7 @@ export const SideBar = ({ data }) => {
             <button type="reset">Reset</button>
           </div>
           {headerFilter.map((item, index) => (
-            <ul key={index}>
+            <ul className="px-3" key={index}>
               <span className="dropdown">
                 <button
                   className="btn btn-primary dropdown-toggle w-100 mt-4 "
