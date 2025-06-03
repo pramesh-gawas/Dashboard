@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const YearList = ({ data, setFormData, formData }) => {
   const filterData = data.filter((item) => item.end_year !== null);
   const uniqueValues = [...new Set(filterData.map((item) => item.end_year))];

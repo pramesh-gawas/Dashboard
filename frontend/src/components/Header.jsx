@@ -1,4 +1,16 @@
+import { useNavigate, Link } from "react-router-dom";
+
 export const Header = () => {
+  const navigate = useNavigate();
+
+  const handleLoginIn = () => {
+    navigate("/login");
+  };
+
+  const handleSignIn = () => {
+    navigate("/signin");
+  };
+
   return (
     <header>
       <div className="px-2 py-2 text-bg-dark border-bottom">
@@ -21,7 +33,7 @@ export const Header = () => {
 
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" className="nav-link text-secondary">
+                <Link to="/home" className="nav-link text-secondary">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -30,10 +42,10 @@ export const Header = () => {
                     <use xlinkHref="#home"></use>
                   </svg>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link text-white">
+                <Link to="/dashboard" className="nav-link text-white">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -42,10 +54,10 @@ export const Header = () => {
                     <use xlinkHref="#speedometer2"></use>
                   </svg>
                   Dashboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link text-white">
+                <Link to="/orders" className="nav-link text-white">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -54,10 +66,10 @@ export const Header = () => {
                     <use xlinkHref="#table"></use>
                   </svg>
                   Orders
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link text-white">
+                <Link to="/products" className="nav-link text-white">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -66,10 +78,10 @@ export const Header = () => {
                     <use xlinkHref="#grid"></use>
                   </svg>
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link text-white">
+                <Link to="/customers" className="nav-link text-white">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -78,7 +90,7 @@ export const Header = () => {
                     <use xlinkHref="#people-circle"></use>
                   </svg>
                   Customers
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="dropdown">
@@ -117,9 +129,9 @@ export const Header = () => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/signout">
                     Sign out
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -146,6 +158,7 @@ export const Header = () => {
               type="button"
               className="btn btn-light text-dark me-2"
               jf-ext-button-ct="login"
+              onClick={handleLoginIn}
             >
               Login
             </button>
@@ -153,6 +166,7 @@ export const Header = () => {
               type="button"
               className="btn btn-primary"
               jf-ext-button-ct="sign-up"
+              onClick={handleSignIn}
             >
               Sign-up
             </button>

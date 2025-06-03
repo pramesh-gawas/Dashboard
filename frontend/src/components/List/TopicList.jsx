@@ -6,7 +6,6 @@ export const TopicList = ({ data, setFormData, formData }) => {
   const uniqueValues = [
     ...new Set(filterData.map((item) => item.topic).flat()),
   ];
-
   const [selectedOptions, setSelectedOptions] = useState([]);
   const name = "select topic";
   const handleSelectChange = (event) => {
