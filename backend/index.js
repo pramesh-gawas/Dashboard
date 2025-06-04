@@ -4,6 +4,10 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const router = require("./router");
+const passport = require("./Authentication/auth");
+
+const bodyparser = require("body-parser");
+app.use(bodyparser.json());
 
 const PORT = process.env.PORT || 3000;
 
