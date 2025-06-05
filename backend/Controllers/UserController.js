@@ -1,4 +1,4 @@
-const SignUp = require("../Schemas/UserSchema");
+const SignUp = require("../models/userschema");
 //create user
 const createUser = async (req, res) => {
   const data = req.body;

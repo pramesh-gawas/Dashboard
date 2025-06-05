@@ -1,10 +1,10 @@
 const express = require("express");
-const db = require("./db");
+const db = require("../db");
 const app = express();
 const cors = require("cors");
 require("dotenv").config();
-const router = require("./router");
-const passport = require("./Authentication/auth");
+const router = require("../routes/router");
+const passport = require("../middleware/auth");
 
 const bodyparser = require("body-parser");
 app.use(bodyparser.json());

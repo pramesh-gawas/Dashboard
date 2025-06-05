@@ -1,4 +1,4 @@
-const SignUp = require("../Schemas/UserSchema");
+const SignUp = require("../models/userschema");
 const passport = require("passport");
 const LocalPassport = require("passport-local").Strategy;
 

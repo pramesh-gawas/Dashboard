@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const passport = require("./Authentication/auth");
+const passport = require("../middleware/auth");
 const authMiddleWare = passport.authenticate("local", { session: false });
-const { GetAllTheData } = require("./Controllers/FilterControllers");
-const { createUser, CreateLog } = require("./Controllers/UserController");
+const { GetAllTheData } = require("../controllers/FilterControllers");
+const { createUser, CreateLog } = require("../controllers/UserController");
 router.get("/home", authMiddleWare, GetAllTheData);
 router.post("/register", createUser);
 router.post("/login", authMiddleWare, CreateLog);

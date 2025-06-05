@@ -1,4 +1,4 @@
-const DashBoard = require("../Schemas/FilterSchema");
+const DashBoard = require("../models/filterschema");
 //to fetch all the data
 const GetAllTheData = async (req, res) => {
   try {
