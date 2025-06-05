@@ -160,7 +160,7 @@ export const Header = () => {
               jf-ext-button-ct="login"
               onClick={handleLoginIn}
             >
-              Login
+              Sign In
             </button>
             <button
               type="button"
@@ -168,7 +168,7 @@ export const Header = () => {
               jf-ext-button-ct="sign-up"
               onClick={handleSignIn}
             >
-              Sign-up
+              Sign up
             </button>
           </div>
         </div>

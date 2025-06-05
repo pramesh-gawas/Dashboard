@@ -1,42 +1,49 @@
+import { useFetchData } from "../../dataFetch/useFetchData";
+
 export const SignIn = () => {
+  URL =
+    "https://dashboard-blue-tau.vercel.app/?vercelToolbarCode=pxw1WNrQcivIn-B";
+
+  const userSignIn = useFetchData(URL);
+
   return (
     <div className="container-sm">
       <form>
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>{" "}
-        <div class="form-floating">
+        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>{" "}
+        <div className="form-floating">
           {" "}
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="floatingInput"
             placeholder="name@example.com"
           />{" "}
-          <label for="floatingInput">Email address</label>{" "}
+          <label htmlFor="floatingInput">Email address</label>{" "}
         </div>{" "}
-        <div class="form-floating">
+        <div className="form-floating">
           {" "}
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="floatingPassword"
             placeholder="Password"
           />{" "}
-          <label for="floatingPassword">Password</label>
+          <label htmlFor="floatingPassword">Password</label>
         </div>{" "}
-        <div class="form-check text-start my-3">
+        <div className="form-check text-start my-3">
           {" "}
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value="remember-me"
             id="checkDefault"
           />{" "}
-          <label class="form-check-label" for="checkDefault">
+          <label className="form-check-label" htmlFor="checkDefault">
             Remember me
           </label>{" "}
         </div>{" "}
-        <button class="btn btn-primary w-100 py-2" type="submit">
-          Sign in
+        <button className="btn btn-primary w-100 py-2" type="submit">
+          Sign In
         </button>{" "}
       </form>
     </div>
