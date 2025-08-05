@@ -3,7 +3,7 @@ import { DataVisuals } from "../DataVisuals";
 import { SideBar } from "../SideBar";
 import { useFetchData } from "../../dataFetch/useFetchData";
 export const Home = () => {
-  const URL = `https://dashboard-blue-tau.vercel.app/?vercelToolbarCode=pxw1WNrQcivIn-B`;
+  const URL = `https://dashboard-cyan-nine-12.vercel.app`;
 
   const data = useFetchData(URL);
 

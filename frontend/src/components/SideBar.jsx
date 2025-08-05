@@ -58,7 +58,7 @@ export const SideBar = ({ data }) => {
   };
   const dataSubmit = (event) => {
     event.preventDefault();
-    const apiUrl = `https://dashboard-blue-tau.vercel.app/?vercelToolbarCode=pxw1WNrQcivIn-B?topic=${formData.topic}&end_year=${formData.end_year}&sector=${formData.sector}&pestle=${formData.pestle}&country=${formData.country}&region=${formData.region}&source=${formData.source}&title=${formData.swot}`;
+    const apiUrl = `https://dashboard-cyan-nine-12.vercel.app?topic=${formData.topic}&end_year=${formData.end_year}&sector=${formData.sector}&pestle=${formData.pestle}&country=${formData.country}&region=${formData.region}&source=${formData.source}&title=${formData.swot}`;
 
     axios
       .get(apiUrl)
