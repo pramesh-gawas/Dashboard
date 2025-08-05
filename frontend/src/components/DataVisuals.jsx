@@ -3,7 +3,7 @@ import { DonoughtChart } from "./charts/DonoughtChart";
 import { ScatterChart } from "./charts/ScatterChart";
 import { LineChart } from "./charts/LineChart";
 import { Sources } from "./Sources";
-import { Url } from "./Url";
+import { GraphUrl } from "./GraphUrl";
 
 export const DataVisuals = () => {
   return (
@@ -32,7 +32,7 @@ export const DataVisuals = () => {
         </div>
         <div className="row mt-2 overflow-scroll">
           <div className="col-12">
-            <Url></Url>
+            <GraphUrl></GraphUrl>
           </div>
         </div>
       </main>

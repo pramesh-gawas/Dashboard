@@ -3,8 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
 
-  const handleLoginIn = () => {
-    navigate("/login");
+  const handleSignUp = () => {
+    navigate("/signup");
   };
 
   const handleSignIn = () => {
@@ -158,7 +158,7 @@ export const Header = () => {
               type="button"
               className="btn btn-light text-dark me-2"
               jf-ext-button-ct="login"
-              onClick={handleLoginIn}
+              onClick={handleSignIn}
             >
               Sign In
             </button>
@@ -166,7 +166,7 @@ export const Header = () => {
               type="button"
               className="btn btn-primary"
               jf-ext-button-ct="sign-up"
-              onClick={handleSignIn}
+              onClick={handleSignUp}
             >
               Sign up
             </button>

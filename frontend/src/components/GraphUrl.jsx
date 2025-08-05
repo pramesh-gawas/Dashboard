@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MyContext } from "./store/ContextAPi";
 
-export const Url = () => {
+export const GraphUrl = () => {
   const { graphData } = useContext(MyContext);
 
   return (

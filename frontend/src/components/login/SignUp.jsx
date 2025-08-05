@@ -1,10 +1,9 @@
-export const LogIn = () => {
+export const SignUp = () => {
   return (
     <div className="container-sm">
       <form>
-        <h1 className="h3 mb-3 fw-normal">Please log in</h1>{" "}
+        <h1 className="h3 mb-3 fw-normal">Please sign up</h1>{" "}
         <div class="form-floating">
-          {" "}
           <input
             type="email"
             className="form-control"
@@ -36,7 +35,7 @@ export const LogIn = () => {
           </label>{" "}
         </div>{" "}
         <button className="btn btn-primary w-100 py-2" type="submit">
-          Log In
+          Sign Up
         </button>{" "}
       </form>
     </div>
