@@ -6,6 +6,7 @@ export const GraphUrl = () => {
 
   return (
     <div>
+      <h2>Important Links</h2>
       {graphData.map((item, index) => (
         <li key={index} style={{ listStyle: "none" }}>
           <a target="_blank" href={item.url}>

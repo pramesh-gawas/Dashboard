@@ -33,7 +33,7 @@ export const Header = () => {
 
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <Link to="/home" className="nav-link text-secondary">
+                <Link to="/home" className="nav-link text-white">
                   <svg
                     className="bi d-block mx-auto mb-1"
                     width="24"
@@ -93,7 +93,7 @@ export const Header = () => {
                 </Link>
               </li>
             </ul>
-            <div className="dropdown">
+            {/* <div className="dropdown">
               <a
                 href="#"
                 className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
@@ -134,7 +134,7 @@ export const Header = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

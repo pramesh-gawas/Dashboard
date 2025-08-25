@@ -90,14 +90,15 @@ export const SideBar = ({ data }) => {
   };
 
   return (
-    <div className="parent">
+    <div className="">
       <GiHamburgerMenu className={style.hamburger} onClick={toggleSidebar} />
       <div
         className={style.sidebar}
         style={{
-          width: "180px",
+          width: "160px",
           border: "1px solid black",
           borderRadius: "20px",
+          marginLeft: "6px",
         }}
         id="sidebar"
       >

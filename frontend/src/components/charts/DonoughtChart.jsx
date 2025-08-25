@@ -16,33 +16,28 @@ export const DonoughtChart = () => {
 
   useEffect(() => {
     // Process the JSON data and prepare it for Chart.js
-    const labels = graphData.map((item) => item.insight);
+    const labels = graphData.map((item) => item.sector);
     const values = graphData.map((item) => item.intensity);
 
     setTopicData({
       labels,
       datasets: [
         {
-          label: uniqvalues.map((item) => item),
+          // label: uniqvalues.map((item) => item),
           data: values,
 
           height: 600,
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
+            "rgba(255, 99, 132, 0.8)", // Vibrant Red
+            "rgba(54, 162, 235, 0.8)", // Bright Blue
+            "rgba(255, 206, 86, 0.8)", // Sunny Yellow
+            "rgba(75, 192, 192, 0.8)", // Bright Teal
+            "rgba(153, 102, 255, 0.8)", // Rich Purple
+            "rgba(255, 159, 64, 0.8)", // Warm Orange
+            "rgba(255, 0, 255, 0.8)", // Vivid Magenta
+            "rgba(0, 255, 0, 0.8)",
           ],
-          borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54,162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "#21832e",
-            "#72294e",
-            "#549b43",
-            "#b4b2bd",
-            "#8cb41c",
-            "#bdab7e",
-          ],
+          borderColor: ["black"],
           borderWidth: 1,
         },
       ],
@@ -52,6 +47,16 @@ export const DonoughtChart = () => {
     responsive: true,
     maintainAspectRatio: false, // Set to false to maintain aspect ratio
     height: 400,
+    plugins: {
+      title: {
+        display: true,
+        text: "Distribution of Data by Sector",
+        color: "blue",
+        font: {
+          size: "30px",
+        },
+      },
+    },
   };
 
   return <Doughnut data={topicData} options={chartOptions}></Doughnut>;

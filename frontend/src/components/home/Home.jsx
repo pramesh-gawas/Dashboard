@@ -8,7 +8,7 @@ export const Home = () => {
   const data = useFetchData(URL);
 
   return (
-    <div className=" d-flex ms-2 me-2  ">
+    <div className=" d-flex">
       <ContextAPi>
         <SideBar data={data} />
         <DataVisuals data={data} />
